@@ -1,0 +1,8 @@
+.light {
+  text-align: center;
+  background-color: lightblue;
+}
+.dark {
+  text-align: left;
+  background-color: grey;
+}
