@@ -1,28 +1,41 @@
-import React from 'react'
-import Main from './Main'
-
-import {ProviderFunction} from './TransactionList'
+import React from 'react';
+import { Header } from './components/Header'
+import { Balance } from './components/Balance'
+import { IncomeExpense } from './components/IncomeExpense';
+import  TransactionList  from './components/TransactionList'
 import './App.css';
+import { AddTransaction } from './components/AddTransaction';
+import { GlobalProviderComponent } from '../src/context/GlobalContextState'
 
-
-
-function App() {
+const App = () => {
   return (
-    
     <div>
-       <ProviderFunction> 
-      
-      <h1> app component </h1>
-        <br />
-        < Main />
-        
 
-         </ProviderFunction> 
+      <div>
+        <Header />
+
+      </div>
+      <GlobalProviderComponent>
+      <div className="container">
+          <Balance />
+          <IncomeExpense />
+          <TransactionList />
+          <AddTransaction />
+        
+</div>
+      </GlobalProviderComponent>
+      </div>
       
         
+    
 
-    </div>
+
+
+
+    
+    
+      
   )
 }
 
-export default App;
+export default App
